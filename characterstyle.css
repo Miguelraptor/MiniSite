@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'StarCartoon';
+    src: url('https://raw.githubusercontent.com/Miguelraptor/MiniSite/main/font/StarCartoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #141f48;
+    font-family: 'StarCartoon', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+  
+
+/*Nav*/
+header{
+    color: white;
+    padding: 8px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #1a2f72 75%, transparent);
+    z-index: 1;
+}
+nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+}
+ul img{
+    width: 90px;
+}
+.socialnetwork{
+    position: absolute;
+    right: 0;
+    margin-top: 0px;
+    margin-right: 28px;
+    width: 70px;
+    margin-left: 8px;
+}
+nav li{
+    display:inline;
+    vertical-align: middle;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*Site*/
+section{
+    color:white;
+    display: flex;
+}
+
+/*Character img*/
+section img{
+    margin: 120px 30px;
+    width:  365px;
+    height:  365px;
+    border-radius: 13px;
+}
+
+/*Title*/
+#mainInfo{
+    display: flex;
+    flex-direction: column;
+}
+#mainInfo h1{
+    margin-top: 120px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    display: flex;
+    align-items:baseline;
+}
+
+/*Elixir, clases y rango*/
+#faststats{
+    display: flex;
+    margin-top: -160px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#range{
+    display: inline-block;
+    margin: 115px 30px;
+    padding: 7px 15px;
+    margin-bottom: 115px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+}
+#faststats img:first-child{
+    margin-left: 0px;
+}
+#faststats img{
+    width: 6.5%;
+    height: 14%;
+    margin-right: -20px;
+}
+
+/*Info*/
+#description{
+    margin-top: -100px;
+    color: #b3c7e7;
+    font-size: 18px;
+}
+
+/*Stats*/
+#statsinfo {
+    margin-top: -100px;
+    display: inline-flex;
+    size: 10px;
+}
+
+#statsinfo div {
+    margin-left: -50px;
+    position: relative;
+}
+
+#statsinfo img.stats {
+    width: 150px;
+    height: 75px;
+}
+
+#statsinfo span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, -50%);
+    margin-left: -60px;
+    font-size: 24px;
+}
+#attacktext{
+    margin-left: -5px !important;
+}
+#ultitext{
+    margin-left: -70px !important;
+}
+#speedtext{
+    margin-left: -90px !important;
+}
+#upgradeablespeed{
+    margin-left: -90px !important;
+}
+.upgradeable{
+    color: #bb99f8;
+    font-size: 14px !important;
+    margin-top: 2px;
+    padding-left: 14px;
+}
+/*Attack*/
+#attackinfo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+    position: relative;
+    margin-top: -115px;
+    margin-left: -50px;
+}
+
+#attackinfo img {
+    height: 100px;
+    width: 400px;
+}
+
+#attackinfo span {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-20%, -50%);
+}
+
+/*Super or Generic*/
+#super-genericinfo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+    position: relative;
+    margin-top: -102px;
+    margin-left: -40px;
+}
+
+#super-genericinfo img {
+    height: 90px;
+    width: 400px;
+}
+
+#ultitext{
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-20%, -50%);
+}
+
+#generictext{
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    transform: translate(-10%, -50%);
+}
+
+
+
+/* Upgrades Section - Overlapping Images */
+#upgrades {
+    position: relative; /* Make this a positioning context */
+    top: -220px;
+    width: 400px;
+    height: 270px;
+}
+
+#upgrades-img {
+    width: 100%;
+    height: 100%;
+    display: block; /* Ensure the image takes up full space */
+}
+
+#upgradeinfo {
+    position: absolute; /* Position relative to #upgrades */
+    top: 0; 
+    left: 130px; 
+    width: 60%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px; /* Add some padding to the text */
+    justify-content: flex-start; /* Align items to the start */
+    text-align: left; /* Align text to the left */
+}
+
+#upgradeinfo div {
+    margin-top: 40px; /* Separate each text input by 70px */
+    width: 100%; /* Reserve space for each row */
+    text-align: left; /* Align text within each row */
+    height: 100px; /* Increased fixed height for each column */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+/*UpgradeColors*/
+.damage{
+    color:rgb(255, 30, 30)
+}
+.health{
+    color:rgb(60, 255, 60)
+}
+.stun{
+    color:rgb(255, 242, 64)
+}

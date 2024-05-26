@@ -1,164 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MiniSrRaptor</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><img src="img/Logo.png"></li>
-                    <li>MiniSrRaptor</li>
-                    <li class="socialnetwork-container">
-                        <a href="https://www.artstation.com/minisrraptor"><img src="img/artstation.png" class="socialnetwork"></a>
-                        <a href="https://sketchfab.com/minisrraptor/models"><img src="img/sketchfab.png" class="socialnetwork"></a>
-                        <a href="https://cults3d.com/en/users/MiniSrRaptor/3d-models"><img src="img/cults3d.png" class="socialnetwork"></a>
-                        <a href="https://www.fiverr.com/users/srraptor"><img src="img/fiverr.png" class="socialnetwork"></a>
-                        <a href="https://www.tiktok.com/@minisrraptor2"><img src="img/tiktok.png" class="socialnetwork"></a>
-                        <a href="https://twitter.com/MiniSrRaptor"><img src="img/x.png" class="socialnetwork"></a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniSrRaptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="img/Logo.png"></li>
+                <li>MiniSrRaptor</li>
+                <li><a href="https://beacons.ai/minisrraptor"><img src="img/beacons.png" class="socialnetwork"></a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section>
-                <h1>Clash Mini FanArt</h1>
-                <p>Learn about stats, abilities and upgardes of my FanArt.</p>
+    <main>
+        <section>
+            <h1>❣️ My Lovely Characters ❣️</h1>
+            <p>Learn about stats, abilities and upgrades of my characters.</p>
+        </section>
+        <section id="miniBox">
             </section>
+    </main>
 
-            <section id="miniBox">
-                <div class="character">
-                    <img src="img/Undertaker.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir5.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/undead.png">
-                        <img src="img/rogue.png">
-                    </div>
-                    <div class="miniName">UNDERTAKER</div>
-                </div>
+    <script>
+        const characters = [
+            {
+                name: "NIGHTMARE",
+                img: "img/nightmare.png", 
+                elixir: "img/elixir5.png",
+                classes: ["img/undead.png", "img/rogue.png"] 
+            },
+            {
+                name: "SUNKEN",
+                img: "img/sunken.png", 
+                elixir: "img/elixir4.png",
+                classes: ["img/sea.png"] 
+            },
+            { 
+                name: "GENIE",
+                img: "img/genie.png", 
+                elixir: "img/elixir3.png",
+                classes: ["img/mage.png"] 
+            },
+            { 
+                name: "GRIFFIN",
+                img: "img/griffin.png", 
+                elixir: "img/elixir2.png",
+                classes: ["img/ranger.png", "img/rogue.png"] 
+            },
+            { 
+                name: "KRAKEN",
+                img: "img/kraken.png", 
+                elixir: "img/elixir2.png",
+                classes: ["img/sea.png", "img/rogue.png"] 
+            },
+            { 
+                name: "ELIXIR PEDDLER",
+                img: "img/ElixirPeddler.png",
+                elixir: "img/elixir4.png",
+                classes: ["img/elixir.png", "img/mage.png"] 
+            },
+            { 
+                name: "BARD",
+                img: "img/bard.png",
+                elixir: "img/elixir3.png",
+                classes: ["img/ranger.png", "img/clan.png"] 
+            },
+            { 
+                name: "CYCLOPS",
+                img: "img/cyclops.png",
+                elixir: "img/elixir2.png",
+                classes: ["img/rogue.png", "img/specialist.png"] 
+            },
+            { 
+                name: "SAMURAI",
+                img: "img/Samurai.png",
+                elixir: "img/elixir2.png",
+                classes: ["img/rogue.png", "img/clan.png"] 
+            },
+            { 
+                name: "TIME TRAVELER",
+                img: "img/TimeTraveler.png",
+                elixir: "img/elixir4.png",
+                classes: ["img/undead.png", "img/mage.png"] 
+            },
+            { 
+                name: "BUTCHER",
+                img: "img/Butcher.png",
+                elixir: "img/elixir3.png",
+                classes: ["img/specialist.png"] 
+            },
+            { 
+                name: "DREAM WEAVER",
+                img: "img/DreamWeaver.png", 
+                elixir: "img/elixir4.png",
+                classes: ["img/mage.png", "img/saint.png"] 
+            },
+            { 
+                name: "ROCKET MACHINE",
+                img: "img/RocketMachine.png",
+                elixir: "img/elixir5.png",
+                classes: ["img/clan.png", "img/specialist.png"] 
+            },
+            { 
+                name: "SAINT GOBLIN",
+                img: "img/SaintGoblin.png",
+                elixir: "img/elixir3.png",
+                classes: ["img/goblin.png", "img/saint.png"] 
+            },
+            { 
+                name: "FOREST GUARDIAN",
+                img: "img/ForestGuardian.png",
+                elixir: "img/elixir4.png",
+                classes: ["img/saint.png", "img/ranger.png"] 
+            },
+            { 
+                name: "BUFFOON",
+                img: "img/Buffoon.png",
+                elixir: "img/elixir2.png",
+                classes: ["img/saint.png", "img/clan.png"] 
+            },
+            { 
+                name: "UNDERTAKER",
+                img: "img/Undertaker.png",
+                elixir: "img/elixir5.png",
+                classes: ["img/undead.png", "img/rogue.png"] 
+            },
+            { 
+                name: "MOA",
+                img: "img/Moa.png",
+                elixir: "img/elixir5.png",
+                classes: ["img/clan.png", "img/specialist.png"] 
+            },
+            { 
+                name: "VIPER DAGGER",
+                img: "img/ViperDagger.png", 
+                elixir: "img/elixir2.png",
+                classes: ["img/rogue.png"] 
+            },
+            { 
+                name: "RUBY",
+                img: "img/Ruby.png", 
+                elixir: "img/elixir4.png",
+                classes: ["img/rogue.png", "img/royal.png"] 
+            },
+            { 
+                name: "WHISPY",
+                img: "img/Whispy.png", 
+                elixir: "img/elixir3.png",
+                classes: ["img/undead.png", "img/mage.png"] 
+            },
+            { 
+                name: "ZANE",
+                img: "img/Zane.png", 
+                elixir: "img/elixir3.png",
+                classes: ["img/mage.png", "img/ranger.png"] 
+            },
+            { 
+                name: "NIX",
+                img: "img/Nix.png",
+                elixir: "img/elixir5.png",
+                classes: ["img/elixir.png"] 
+            },
+            { 
+                name: "BATTY",
+                img: "img/Batty.png",
+                elixir: "img/elixir4.png",
+                classes: ["img/rogue.png", "img/undead.png"] 
+            },
+            { 
+                name: "YUKI",
+                img: "img/Yuki.png", 
+                elixir: "img/elixir3.png",
+                classes: ["img/mage.png"] 
+            },
+            { 
+                name: "RAYA",
+                img: "img/Raya.png", 
+                elixir: "img/elixir4.png",
+                classes: ["img/saint.png", "img/clan.png"] 
+            },
+            { 
+                name: "SPARKY",
+                img: "img/Sparky.png", 
+                elixir: "img/elixir3.png",
+                classes: ["img/clan.png"] 
+            }
+        ];
 
-                <div class="character">
-                    <img src="img/Moa.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir5.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/clan.png">
-                        <img src="img/specialist.png">
-                    </div>
-                    <div class="miniName">MOA</div>
-                </div>
+        const miniBox = document.getElementById('miniBox');
 
-                <div class="character">
-                    <img src="img/ViperDagger.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir2.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/rogue.png">
-                    </div>
-                    <div class="miniName">VIPERDAGGER</div>
-                </div>
+        characters.forEach(character => {
+            const characterLink = document.createElement('a');
+            characterLink.href = `character.html?name=${encodeURIComponent(character.name)}`; 
+            characterLink.classList.add('character');
 
-                <div class="character">
-                    <img src="img/Ruby.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir4.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/rogue.png">
-                        <img src="img/royal.png">
-                    </div>
-                    <div class="miniName">RUBY</div>
-                </div>
+            const img = document.createElement('img');
+            img.src = character.img;
+            img.classList.add('mini');
+            characterLink.appendChild(img);
 
-                <div class="character">
-                    <img src="img/Whispy.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir3.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/undead.png">
-                        <img src="img/mage.png">
-                    </div>
-                    <div class="miniName">WHISPY</div>
-                </div>
+            const elixirDiv = document.createElement('div');
+            elixirDiv.classList.add('elixir');
+            const elixirImg = document.createElement('img');
+            elixirImg.src = character.elixir;
+            elixirDiv.appendChild(elixirImg);
+            characterLink.appendChild(elixirDiv);
 
-                <div class="character">
-                    <img src="img/Zane.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir3.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/mage.png">
-                        <img src="img/ranger.png">
-                    </div>
-                    <div class="miniName">ZANE</div>
-                </div>
+            const classesDiv = document.createElement('div');
+            classesDiv.classList.add('class');
+            character.classes.forEach(classImgSrc => {
+                const classImg = document.createElement('img');
+                classImg.src = classImgSrc;
+                classesDiv.appendChild(classImg);
+            });
+            characterLink.appendChild(classesDiv);
 
-                <div class="character">
-                    <img src="img/Nix.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir5.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/elixir.png">
-                    </div>
-                    <div class="miniName">NIX</div>
-                </div>
+            const nameDiv = document.createElement('div');
+            nameDiv.classList.add('miniName');
+            nameDiv.textContent = character.name;
+            characterLink.appendChild(nameDiv);
 
-                <div class="character">
-                    <img src="img/Batty.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir4.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/rogue.png">
-                        <img src="img/undead.png">
-                    </div>
-                    <div class="miniName">BATTY</div>
-                </div>
-
-                <div class="character">
-                    <img src="img/Yuki.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir3.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/mage.png">
-                    </div>
-                    <div class="miniName">YUKI</div>
-                </div>
-
-                <div class="character">
-                    <img src="img/Raya.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir4.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/saint.png">
-                        <img src="img/clan.png">
-                    </div>
-                    <div class="miniName">RAYA</div>
-                </div>
-
-                <div class="character">
-                    <img src="img/Sparky.png" class="mini">
-                    <div class="elixir">
-                        <img src="img/elixir3.png">
-                    </div>
-                    <div class="class">
-                        <img src="img/clan.png">
-                    </div>
-                    <div class="miniName">SPARKY</div>
-                </div>
-            </section>
-        </main>
-    </body>
+            miniBox.appendChild(characterLink);
+        });
+    </script>
+</body>
 </html>

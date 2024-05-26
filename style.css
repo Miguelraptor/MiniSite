@@ -1,15 +1,20 @@
+/* style.css - Main Page */
+
 body{
-    background-color: #141f48;
-    font-family: star cartoon, Arial, sans-serif;
+    background-color: #141f48; /* Back to the original dark blue */
+    font-family: 'star cartoon', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: white; 
 }
+
+/*Nav*/
 header{
     color: white;
     padding: 8px;
     position: fixed;
     width: 100%;
-    height: 10%;
+    height: 100px;
     background: linear-gradient(to bottom, #1a2f72 75%, transparent);
     z-index: 1;
 }
@@ -22,94 +27,99 @@ nav ul{
 ul img{
     width: 90px;
 }
-.socialnetwork-container {
+.socialnetwork{
     position: absolute;
     right: 0;
-    margin-top: 18px;
+    margin-top: 0px;
     margin-right: 28px;
-}
-.socialnetwork {
-    width: 35px;
+    width: 70px;
     margin-left: 8px;
 }
 nav li{
     display:inline;
     vertical-align: middle;
 }
-nav a{
+a{
     color: white;
     text-decoration: none;
 }
-main{
-    padding: 64px 32px;
-}
-section{
-    margin-bottom: 16px;
-    color:white;
-}
-main section:first-child{
-    margin-top: 64px;
-}
-section p{
-    color: #b3c7e7;
-    margin-top: 0px;
+
+main {
+    padding: 100px 20px; 
 }
 
-h1{
-    font-size: 32px;
+/* Center the introductory text */
+section:first-child {
+    text-align: center; 
+    margin-bottom: 40px; /* Increased margin */
+}
+
+section p {
+    color: #b3c7e7;
+    margin-top: 8px;
+}
+
+h1 {
+    font-size: 2.5em; 
     margin-bottom: 10px;
 }
-p{
-    font-size: 18px;
-    line-height: 1.5;
-}
-#miniBox{
+
+/* Character Grid */
+#miniBox {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
-.character{
-    width:  100%;
-    margin: 10px;
-    border: solid 3px grey;
+
+/* Character Card - Keep most of the previous styles */
+.character {
+    width: 100%;
+    border: 3px solid #b3c7e7;
     border-radius: 16px;
-    position:relative;
+    position: relative;
+    text-align: center; 
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
-.mini{
-    width:  100%;
-    border-radius: 13px;
-    margin-bottom: 20px;
+
+.character:hover {
+    transform: translateY(-8px); /* More lift on hover */
 }
-.class{
-    border: none;
+
+.mini {
+    width: 100%;
+    display: block; 
+    border-radius: 13px 13px 0 0;
+}
+
+.class {
     position: absolute;
+    top: 50px;
+    left: 10px;
     display: flex;
     flex-direction: column;
-    top:12%;
-    right: 2%;
 }
-.class img{
+
+.class img {
     width: 25px;
-    margin-left: 40px;
-    margin-bottom: 4px;
+    margin-top: 5px;
 }
-.elixir{
-    border: none;
+
+.elixir {
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 10px;
+    left: 10px;
 }
-.elixir img{
+
+.elixir img {
     width: 35px;
-    margin-right: 40px;
 }
-.miniName{
-    padding-top: 30px;
-    text-align: center;
-    position: absolute;
-    font-size: 25px;
-    border-radius: 13px;
-    bottom: 0;
-    width: 100%;
+
+.miniName {
+    padding: 15px; 
+    font-size: 1.3em;
+    border-radius: 0 0 13px 13px; 
     background: linear-gradient(to top, #1a2f72 50%, transparent);
+    position: relative;
+    width: auto;
 }
