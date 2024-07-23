@@ -1,0 +1,986 @@
+{
+  "CROW": {
+    "name": "CROW",
+    "img": "img/crow.png", 
+    "elixir": "img/elixir4.png",
+    "classes": ["img/villager.png"],
+    "range": "Range: 4",
+    "description": "An annoying, long-range character",
+    "health": { "base": 21, "upgrade": "+8" },
+    "attack": {
+      "base": 3,
+      "description": "Throw a feather",
+      "speed": 0.6
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.15" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Deals anti-heal for 4 sec every 3 attacks",
+      "<txt class='specialUpgrade'>Attack:</txt> Drains 3 Energy every 3 attacks",
+      "<txt class='specialUpgrade'>Attack:</txt> Deals 2x damage to injured enemies"
+    ],
+    "poses": [
+      "poses/crow/Default.png",
+      "poses/crow/Attacking.png",
+      "poses/crow/Upgrade1.png",
+      "poses/crow/Upgrade2.png",
+      "poses/crow/Upgrade3.png",
+      "poses/crow/Default.png" 
+    ]
+  },
+  "SCARECROW": {
+    "name": "SCARECROW",
+    "img": "img/scarecrow.png", 
+    "elixir": "img/elixir4.png",
+    "classes": ["img/villager.png"],
+    "range": "Melee",
+    "description": "A character that serves as a scarecrow",
+    "health": { "base": 43, "upgrade": "+9" },
+    "attack": {
+      "base": 3,
+      "description": "He turns around on himself",
+      "speed": 0.6
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "3/10",
+      "description": "Deals a backwards dash, spawning a 15 HP scarecrow"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Gain 1 max HP every 6 hits (max 30HP)",
+      "<txt class='specialUpgrade'>Super:</txt> Spawned scarecrow has 30HP",
+      "<txt class='specialUpgrade'>Super:</txt> Spawned Scarecrow gains Taunted"
+    ],
+    "poses": [
+      "poses/scarecrow/Default.png",
+      "poses/scarecrow/Attacking.png",
+      "poses/scarecrow/Upgrade1.png",
+      "poses/scarecrow/Upgrade2.png",
+      "poses/scarecrow/Upgrade3.png",
+      "poses/scarecrow/Default.png" 
+    ]
+  },
+  "HERO PUPIL": {
+    "name": "HERO PUPIL",
+    "img": "img/heropupil.png", 
+    "elixir": "img/elixir5.png",
+    "classes": ["img/royal.png", "img/clan.png"],
+    "range": "Melee",
+    "description": "A lovable character who improves through his team.",
+    "health": { "base": 44, "upgrade": "+11" },
+    "attack": {
+      "base": 3,
+      "description": "With his ponytail",
+      "speed": 0.6
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.2" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Passive:</txt> +5% of attack speed for each upgrade on the team",
+      "<txt class='specialUpgrade'>Passive:</txt> +1 HP for all characters for each upgrade on the team",
+      "<txt class='specialUpgrade'>Passive:</txt> +4 HP for each upgrade on the team"
+    ],
+    "poses": [
+      "poses/heropupil/Default.png",
+      "poses/heropupil/Attacking.png",
+      "poses/heropupil/Upgrade1.png",
+      "poses/heropupil/Upgrade2.png",
+      "poses/heropupil/Upgrade3.png",
+      "poses/heropupil/Default.png" 
+    ]
+  },
+  "SPORE HUNTER": {
+    "name": "SPORE HUNTER",
+    "img": "img/sporehunter.png", 
+    "elixir": "img/elixir5.png",
+    "classes": ["img/saint.png", "img/undead.png"],
+    "range": "Range: Infinite",
+    "description": "A powerful character that affects all characters.",
+    "health": { "base": 28, "upgrade": "+9" },
+    "attack": {
+      "base": 2,
+      "description": "Throws spores that spread across the map in 20 sec",
+      "speed": "2 sec"
+    },
+    "speed": { "base": "♾️"},
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> +4HP per sec to allies",
+      "<txt class='specialUpgrade'>Attack:</txt> 3 DMG per sec",
+      "<txt class='specialUpgrade'>Attack:</txt> Spores spread across the map in 10 sec"
+    ],
+    "poses": [
+      "poses/sporehunter/Default.png",
+      "poses/sporehunter/Attacking.png",
+      "poses/sporehunter/Upgrade1.png",
+      "poses/sporehunter/Upgrade2.png",
+      "poses/sporehunter/Upgrade3.png",
+      "poses/sporehunter/Default.png" 
+    ]
+  },
+  "SPECTRUM": {
+    "name": "SPECTRUM",
+    "img": "img/spectrum.png", 
+    "elixir": "img/elixir3.png",
+    "classes": ["img/undead.png", "img/rogue.png"],
+    "range": "Range: 3",
+    "description": "A character that bounce attack and grant invisibility",
+    "health": { "base": 18, "upgrade": "+8" },
+    "attack": {
+      "base": 2,
+      "description": "Throws his spectre spear through an opponent",
+      "speed": 0.6
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "2/12",
+      "description": "Makes all allies invisible for 2 sec and gains 2x DMG"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Spear bounce to another character",
+      "<txt class='specialUpgrade'>Attack:</txt> Bounce 3 times (+1 bounce)",
+      "<txt class='specialUpgrade'>Super:</txt> Makes all allies invisible for 4 sec"
+    ],
+    "poses": [
+      "poses/spectrum/Default.png",
+      "poses/spectrum/Attacking.png",
+      "poses/spectrum/Upgrade1.png",
+      "poses/spectrum/Upgrade2.png",
+      "poses/spectrum/Upgrade3.png",
+      "poses/spectrum/Default.png" 
+    ]
+  },
+  "STAR CALLER": {
+    "name": "STAR CALLER",
+    "img": "img/starcaller.png", 
+    "elixir": "img/elixir3.png",
+    "classes": ["img/saint.png", "img/royal.png"],
+    "range": "Range: 3",
+    "description": "A Stelar Mini that improves with every attack",
+    "health": { "base": 34, "upgrade": "+12" },
+    "attack": {
+      "base": 2,
+      "description": "Shoots a stelar light with her stelar cannon",
+      "speed": 0.5
+    },
+    "speed": { "base": 0.5, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "0/5",
+      "description": "Trows a star at the farthest ally, healing 33% HP"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> +1 DMG per 5 attacks",
+      "<txt class='specialUpgrade'>Attack:</txt> +0.05 ATK speed per attack",
+      "<txt class='specialUpgrade'>Super:</txt> Heal 66% HP"
+    ],
+    "poses": [
+      "poses/starcaller/Default.png",
+      "poses/starcaller/Attacking.png",
+      "poses/starcaller/Upgrade1.png",
+      "poses/starcaller/Upgrade2.png",
+      "poses/starcaller/Upgrade3.png",
+      "poses/starcaller/Default.png" 
+    ]
+  },
+  "NIGHTMARE": {
+    "name": "NIGHTMARE",
+    "img": "img/nightmare.png",
+    "elixir": "img/elixir5.png",
+    "classes": ["img/undead.png", "img/rogue.png"],
+    "range": "Melee",
+    "description": "A terrifying Mini that can remove upgrades.",
+    "health": { 
+      "base": 66, 
+      "upgrade": "+11" 
+    },
+    "attack": { 
+      "base": 5
+    },
+    "speed": { 
+      "base": 0.6, 
+      "upgrade": "+0.2" 
+    },
+    "clash": "Remove all upgrades from the Mini in front of him.",
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> <txt class='damageUpgrade'>3x damage</txt> to injured Minis.",
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='damageUpgrade'>+1 DMG</txt> permanent.",
+      "<txt class='specialUpgrade'>Clash:</txt> <txt class='healthUpgrade'>+15 HP,</txt> <txt class='damageUpgrade'>+1 DMG,</txt> <txt class='attackSpeedUpgrade'>+0.1 ATK speed</txt> per upgrade removed."
+    ],
+    "poses": [
+      "poses/nightmare/Default.png",
+      "poses/nightmare/Attacking.png",
+      "poses/nightmare/Upgrade1.png",
+      "poses/nightmare/Upgrade2.png",
+      "poses/nightmare/Upgrade3.png",
+      "poses/nightmare/Default.png"
+    ]
+  },
+  "SUNKEN": {
+    "name": "SUNKEN",
+    "img": "img/sunken.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/sea.png"],
+    "range": "Melee",
+    "description": "The perfect Mini to slow all opponent Minis.",
+    "health": { "base": 37, "upgrade": "+11" },
+    "attack": { "base": 4 },
+    "speed": { "base": "3.5 sec" },
+    "ultimate": {
+      "cost": "1/7",
+      "description": "Create a Tsunami dealing 8 DMG and -66% Slow for 6 sec."
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Super:</txt> Deals 16 DMG.",
+      "<txt class='specialUpgrade'>Attack:</txt> Rest 2 sec to surf another wave.",
+      "<txt class='specialUpgrade'>Attack:</txt> Also Slow -33%."
+    ],
+    "poses": [
+      "poses/sunken/Default.png",
+      "poses/sunken/Attacking.png",
+      "poses/sunken/Upgrade1.png",
+      "poses/sunken/Upgrade2.png",
+      "poses/sunken/Upgrade3.png",
+      "poses/sunken/Default.png"
+    ]
+  },
+  "GENIE": {
+    "name": "GENIE",
+    "img": "img/genie.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/mage.png"],
+    "range": "Melee",
+    "description": "The perfect Mini against tank Minis.",
+    "health": { "base": 23, "upgrade": "+11" },
+    "attack": { "base": "10%" },
+    "speed": { "base": 0.7, "upgrade": "+0.1" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Deals <txt class='damageUpgrade'>15% of the opponent Mini's max HP</txt>.",
+      "<txt class='specialUpgrade'>KOed:</txt> Burns all opponents dealing 2 DMG/sec for 5 sec.",
+      "<txt class='specialUpgrade'>Attack Speed:</txt> <txt class='attackSpeedUpgrade'>+1% ATK speed</txt> per 4 HP of opponents Minis."
+    ],
+    "poses": [
+      "poses/genie/Default.png",
+      "poses/genie/Attacking.png",
+      "poses/genie/Upgrade1.png",
+      "poses/genie/Upgrade2.png",
+      "poses/genie/Upgrade3.png",
+      "poses/genie/Default.png"
+    ]
+  },
+  "GRIFFIN": {
+    "name": "GRIFFIN",
+    "img": "img/griffin.png",
+    "elixir": "img/elixir2.png",
+    "classes": ["img/ranger.png", "img/rogue.png"],
+    "range": "Range: 5",
+    "description": "A crazy Mini that is just crazy.",
+    "health": { "base": 16, "upgrade": "+6" },
+    "attack": { "base": 2 },
+    "speed": { "base": 0.6, "upgrade": "+0.1" },
+    "clash": "Dashes to the nearest enemy and returns, dealing 3 DMG and stunning for 0.5 sec.",
+    "upgrades": [
+      "<txt class='specialUpgrade'>Clash:</txt> Deals <txt class='damageUpgrade'>6 DMG</txt>.",
+      "<txt class='specialUpgrade'>Clash:</txt> <txt class='stunUpgrade'>Stuns</txt> for 1 sec.",
+      "<txt class='specialUpgrade'>Clash:</txt> Clash becomes Ulti with an Energy cost of 4."
+    ],
+    "poses": [
+      "poses/griffin/Default.png",
+      "poses/griffin/Attacking.png",
+      "poses/griffin/Upgrade1.png",
+      "poses/griffin/Upgrade2.png",
+      "poses/griffin/Upgrade3.png",
+      "poses/griffin/Default.png"
+    ]
+  },
+  "KRAKEN": {
+    "name": "KRAKEN",
+    "img": "img/kraken.png",
+    "elixir": "img/elixir2.png",
+    "classes": ["img/sea.png", "img/rogue.png"],
+    "range": "Melee",
+    "description": "An incredible Mini in 1 vs 1.",
+    "health": { "base": 16, "upgrade": "+6" },
+    "attack": { "base": 2 },
+    "speed": { "base": 0.9, "upgrade": "+0.2" },
+    "ultimate": {
+      "cost": "1/5",
+      "description": "Throws ink that disarms the enemy for 0.5 sec."
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='healthUpgrade'>Full HP</txt>.",
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='unespeciedUpgrade'>Disarms</txt> for 1 sec.",
+      "<txt class='specialUpgrade'>Attack:</txt> Deals <txt class='damageUpgrade'>+1 DMG</txt> to injured enemies."
+    ],
+    "poses": [
+      "poses/kraken/Default.png",
+      "poses/kraken/Attacking.png",
+      "poses/kraken/Upgrade1.png",
+      "poses/kraken/Upgrade2.png",
+      "poses/kraken/Upgrade3.png",
+      "poses/kraken/Default.png"
+    ]
+  },
+  "ELIXIR PEDDLER": {
+    "name": "ELIXIR PEDDLER",
+    "img": "img/ElixirPeddler.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/elixir.png", "img/mage.png"],
+    "range": "Range: 4",
+    "description": "A complicated Mini that can change matches.",
+    "health": { "base": 18, "upgrade": "+9" },
+    "attack": {
+      "base": 2,
+      "description": "Throws his elixir bowl, dealing damage in a 3x3 area."
+    },
+    "speed": { "base": 0.4, "upgrade": "+0.1" },
+    "passive": "Can move him once time per match replacing another Mini giving you the Elixir you spent.",
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Gain <txt class='attackSpeedUpgrade'>2% attack speed</txt> per stored elixir.",
+      "<txt class='specialUpgrade'>Passive:</txt> Gain <txt class='attackSpeedUpgrade'>8% attack speed</txt> per elixir returned.",
+      "<txt class='specialUpgrade'>KO:</txt> Leaves a 3x3 permanent elixir puddle dealing 4 DMG every 2 sec."
+    ],
+    "poses": [
+      "poses/elixirpeddler/Default.png",
+      "poses/elixirpeddler/Attacking.png",
+      "poses/elixirpeddler/Upgrade1.png",
+      "poses/elixirpeddler/Upgrade2.png",
+      "poses/elixirpeddler/Upgrade3.png",
+      "poses/elixirpeddler/Default.png"
+    ]
+  },
+  "BARD": {
+    "name": "BARD",
+    "img": "img/bard.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/ranger.png", "img/clan.png"],
+    "range": "Range: 3",
+    "description": "A powerful Mini if you know how to positionate him.",
+    "health": { "base": 23, "upgrade": "+9" },
+    "attack": {
+      "base": 10,
+      "description": "Create a 3x3 wave of musical notes."
+    },
+    "speed": { "base": 0.25, "upgrade": "+0.05" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> <txt class='healthUpgrade'>Heals 10 HP</txt>.",
+      "<txt class='specialUpgrade'>Attack:</txt> <txt class='stunUpgrade'>Stun</txt> 0.5 sec.",
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='attackSpeedUpgrade'>100% attack speed</txt> for 6 sec."
+    ],
+    "poses": [
+      "poses/bard/Default.png",
+      "poses/bard/Attacking.png",
+      "poses/bard/Upgrade1.png",
+      "poses/bard/Upgrade2.png",
+      "poses/bard/Upgrade3.png",
+      "poses/bard/Default.png"
+    ]
+  },
+  "CYCLOPS": {
+    "name": "CYCLOPS",
+    "img": "img/cyclops.png",
+    "elixir": "img/elixir2.png",
+    "classes": ["img/rogue.png", "img/specialist.png"],
+    "range": "Melee",
+    "description": "A Mini that calls others identical Mini.",
+    "health": { "base": 18, "upgrade": "+7" },
+    "attack": {
+      "base": 2,
+      "description": "Slap the enemy."
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "1/6",
+      "description": "Use horn to call other cyclops with the same abilities and upgrades."
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='attackSpeedUpgrade'>+25% attack speed</txt> around him for 6 sec.",
+      "<txt class='specialUpgrade'>Super:</txt> Call 2 cyclopes.",
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='damageUpgrade'>2X DMG</txt> around him for 6 sec."
+    ],
+    "poses": [
+      "poses/cyclops/Default.png",
+      "poses/cyclops/Attacking.png",
+      "poses/cyclops/Upgrade1.png",
+      "poses/cyclops/Upgrade2.png",
+      "poses/cyclops/Upgrade3.png",
+      "poses/cyclops/Default.png"
+    ]
+  },
+  "SAMURAI": {
+    "name": "SAMURAI",
+    "img": "img/Samurai.png",
+    "elixir": "img/elixir2.png",
+    "classes": ["img/rogue.png", "img/clan.png"],
+    "range": "Melee",
+    "description": "A lethal fast damage Mini.",
+    "health": { "base": 18, "upgrade": "+8" },
+    "attack": { "base": 2 },
+    "speed": { "base": 0.9, "upgrade": "+0.15" },
+    "ultimate": {
+      "cost": "1/3",
+      "description": "Dash through enemies to the farthest one dealing 4 DMG.",
+      "damage": 4
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='attackSpeedUpgrade'>+5% attack speed</txt> for each enemy hit.",
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='healthUpgrade'>Heal 30% HP</txt>.",
+      "<txt class='specialUpgrade'>Attack:</txt> Deals <txt class='damageUpgrade'>2x damage</txt> when isolated."
+    ],
+    "poses": [
+      "poses/samurai/Default.png",
+      "poses/samurai/Attacking.png",
+      "poses/samurai/Upgrade1.png",
+      "poses/samurai/Upgrade2.png",
+      "poses/samurai/Upgrade3.png",
+      "poses/samurai/Default.png"
+    ]
+  },
+  "TIME TRAVELER": {
+    "name": "TIME TRAVELER",
+    "img": "img/TimeTraveler.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/undead.png", "img/mage.png"],
+    "range": "Range: 3",
+    "description": "A unique Mini that can teleport enemies and heal itself.",
+    "health": { "base": 24, "upgrade": "+9" },
+    "attack": {
+      "base": 3,
+      "description": "Throw a Temporal Disk."
+    },
+    "speed": { "base": 0.7, "upgrade": "+0.1" },
+    "passive": "For every 6 hits teleport the enemy to the farthest square and heal itself 10% of HP.",
+    "ultimate": {
+      "cost": "2/5",
+      "description": "Makes him Invisible for 4 sec."
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack Speed:</txt> <txt class='attackSpeedUpgrade'>+50% attack speed</txt> while in Super.",
+      "<txt class='specialUpgrade'>Passive:</txt> Passive cast every 4 hits.",
+      "<txt class='specialUpgrade'>Attack:</txt> When overhealth gains <txt class='damageUpgrade'>2X Damage</txt>."
+    ],
+    "poses": [
+      "poses/timetraveler/Default.png",
+      "poses/timetraveler/Attacking.png",
+      "poses/timetraveler/Upgrade1.png",
+      "poses/timetraveler/Upgrade2.png",
+      "poses/timetraveler/Upgrade3.png",
+      "poses/timetraveler/Default.png"
+    ]
+  },
+  "BUTCHER": {
+    "name": "BUTCHER",
+    "img": "img/Butcher.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/specialist.png"],
+    "range": "Melee",
+    "description": "A crazy Mini very powerful that can turn against you.",
+    "health": { "base": 48, "upgrade": "+14" },
+    "attack": {
+      "base": 3,
+      "description": "Hits with his kitchen knife."
+    },
+    "speed": { "base": 0.7, "upgrade": "+0.1" },
+    "passive": "If recibe +15 DMG in 3 sec goes crazy gaining 50% hit speed and 2x DMG, attacking allies and enemies for 4 sec.",
+    "upgrades": [
+      "<txt class='specialUpgrade'>Passive:</txt> Can receive 25 DMG.",
+      "<txt class='specialUpgrade'>Passive:</txt> Allies do not receive <txt class='damageUpgrade'>2x damage</txt>.",
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='healthUpgrade'>Heals 30% HP</txt>."
+    ],
+    "poses": [
+      "poses/butcher/Default.png",
+      "poses/butcher/Attacking.png",
+      "poses/butcher/Upgrade1.png",
+      "poses/butcher/Upgrade2.png",
+      "poses/butcher/Upgrade3.png",
+      "poses/butcher/Default.png"
+    ]
+  },
+  "DREAM WEAVER": {
+    "name": "DREAM WEAVER",
+    "img": "img/DreamWeaver.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/mage.png", "img/saint.png"],
+    "range": "Range: 4",
+    "description": "A mage Mini that confuses enemies using the power of dreams.",
+    "health": { "base": 19, "upgrade": "+7" },
+    "attack": {
+      "base": 8,
+      "description": "Throw a dream wave with his staff."
+    },
+    "speed": { "base": 0.4, "upgrade": "+0.05" },
+    "passive": "When KOed, team heals 2% every 2 sec.",
+    "ultimate": {
+      "cost": "1/5",
+      "description": "Throw an illusionary wave hitting the nearest enemy and confusing them to attack their allies for 4 sec."
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Super:</txt> Confused Mini deals <txt class='damageUpgrade'>2x damage</txt>.",
+      "<txt class='specialUpgrade'>Super:</txt> Super duration takes 7 sec.",
+      "<txt class='specialUpgrade'>Passive:</txt> When KOed, team <txt class='healthUpgrade'>heals 4%</txt> every 2 sec."
+    ],
+    "poses": [
+      "poses/dreamweaver/Default.png",
+      "poses/dreamweaver/Attacking.png",
+      "poses/dreamweaver/Upgrade1.png",
+      "poses/dreamweaver/Upgrade2.png",
+      "poses/dreamweaver/Upgrade3.png",
+      "poses/dreamweaver/Default.png"
+    ]
+  },
+  "ROCKET MACHINE": {
+    "name": "ROCKET MACHINE",
+    "img": "img/RocketMachine.png",
+    "elixir": "img/elixir5.png",
+    "classes": ["img/clan.png", "img/specialist.png"],
+    "range": "Range: 2",
+    "description": "A mechanical Mini that can deploy a shield to protect allies. Specialises in protection and high damage.",
+    "health": { "base": 30, "upgrade": "+13" },
+    "attack": {
+      "base": 5,
+      "description": "Launch a rocket.",
+      "ammo": "10",
+      "reloadSpeed": "5 sec"
+    },
+    "speed": { "base": 1.4, "upgrade": "+0.2" },
+    "ultimate": {
+      "cost": "0/10",
+      "description": "Deploy a shield to the nearest ally.",
+      "blockingDamage": "50%",
+      "duration": "All round"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Deals 2 damage around the attack.",
+      "<txt class='specialUpgrade'>Super:</txt> Grant <txt class='damageUpgrade'>x2 Damage</txt>.",
+      "<txt class='specialUpgrade'>Super:</txt> Reduces reload speed by 0.5 sec per shield granted."
+    ],
+    "poses": [
+      "poses/rocketmachine/Default.png",
+      "poses/rocketmachine/Attacking.png",
+      "poses/rocketmachine/Upgrade1.png",
+      "poses/rocketmachine/Upgrade2.png",
+      "poses/rocketmachine/Upgrade3.png",
+      "poses/rocketmachine/Default.png"
+    ]
+  },
+  "SAINT GOBLIN": {
+    "name": "SAINT GOBLIN",
+    "img": "img/SaintGoblin.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/goblin.png", "img/saint.png"],
+    "range": "Melee",
+    "description": "A melee tank Mini that avoid and reflects damage.",
+    "health": { "base": 40, "upgrade": "+10" },
+    "attack": { "base": 2 },
+    "speed": { "base": 0.5, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "2/5",
+      "description": "Reflects damage taken around him.",
+      "damage": "25%"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Damage Reduction:</txt> Takes <txt class='unespeciedUpgrade'>50% less damage</txt> when Injured.",
+      "<txt class='specialUpgrade'>Super:</txt> Reflects <txt class='unespeciedUpgrade'>50% of damage</txt> taken.",
+      "<txt class='specialUpgrade'>Super:</txt> Super also <txt class='healthUpgrade'>heals</txt>."
+    ],
+    "poses": [
+      "poses/saintgoblin/Default.png",
+      "poses/saintgoblin/Attacking.png",
+      "poses/saintgoblin/Upgrade1.png",
+      "poses/saintgoblin/Upgrade2.png",
+      "poses/saintgoblin/Upgrade3.png",
+      "poses/saintgoblin/Default.png"
+    ]
+  },
+  "FOREST GUARDIAN": {
+    "name": "FOREST GUARDIAN",
+    "img": "img/ForestGuardian.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/saint.png", "img/ranger.png"],
+    "range": "Range: 5",
+    "description": "A ranged Mini that can grow vines to attack and support.",
+    "health": { "base": 25, "upgrade": "+10" },
+    "attack": {
+      "base": 6,
+      "description": "Grow vines - Attacks the farthest enemy and deals damage to nearby squares."
+    },
+    "speed": { "base": 0.5, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "2/5",
+      "description": "Grow vines up to the farthest ally.",
+      "damage": 10,
+      "health": "20%"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='stunUpgrade'>Stuns enemies</txt> for 3 sec.",
+      "<txt class='specialUpgrade'>Super:</txt> Grants <txt class='unespeciedUpgrade'>1 Energy</txt> to allies.",
+      "<txt class='specialUpgrade'>Super:</txt> Grants allies <txt class='unespeciedUpgrade'>Unstoppable</txt> for 4 sec."
+    ],
+    "poses": [
+      "poses/forestguardian/Default.png",
+      "poses/forestguardian/Attacking.png",
+      "poses/forestguardian/Upgrade1.png",
+      "poses/forestguardian/Upgrade2.png",
+      "poses/forestguardian/Upgrade3.png",
+      "poses/forestguardian/Default.png"
+    ]
+  },
+  "BUFFOON": {
+    "name": "BUFFOON",
+    "img": "img/Buffoon.png",
+    "elixir": "img/elixir2.png",
+    "classes": ["img/saint.png", "img/clan.png"],
+    "range": "Range: 2",
+    "description": "A Mini that heals with every attack.",
+    "health": { "base": 16, "upgrade": "+8" },
+    "attack": {
+      "base": 2,
+      "description": "Hits with an energy orb - Heals all allies with 100% of the HP she deals with each attack."
+    },
+    "speed": { "base": 0.7, "upgrade": "+0.1" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> Deals <txt class='damageUpgrade'>3 DMG</txt>.",
+      "<txt class='specialUpgrade'>Health:</txt> <txt class='healthUpgrade'>200% HP</txt>.",
+      "<txt class='specialUpgrade'>Heal:</txt> Can heal itself."
+    ],
+    "poses": [
+      "poses/buffoon/Default.png",
+      "poses/buffoon/Attacking.png",
+      "poses/buffoon/Upgrade1.png",
+      "poses/buffoon/Upgrade2.png",
+      "poses/buffoon/Upgrade3.png",
+      "poses/buffoon/Default.png"
+    ]
+  },
+  "UNDERTAKER": {
+    "name": "UNDERTAKER",
+    "img": "img/Undertaker.png",
+    "elixir": "img/elixir5.png",
+    "classes": ["img/undead.png", "img/rogue.png"],
+    "range": "Melee",
+    "description": "A legendary Mini who can revive allies.",
+    "health": { "base": 40, "upgrade": "+10" },
+    "attack": { "base": 6 },
+    "speed": { "base": 0.8, "upgrade": "+0.05" },
+    "ultimate": {
+      "cost": "3/9",
+      "description": "Revive the longest dead ally with <txt class='healthUpgrade'>50% HP</txt>."
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Ultimate:</txt> Ally revives to <txt class='healthUpgrade'>100% HP</txt>.",
+      "<txt class='specialUpgrade'>Ultimate:</txt> When revive an ally both gains <txt class='damageUpgrade'>+1 DMG</txt> (stacks).",
+      "<txt class='specialUpgrade'>Attack:</txt> Gains <txt class='unespeciedUpgrade'>100% HP steal</txt>."
+    ],
+    "poses": [
+      "poses/undertaker/Default.png",
+      "poses/undertaker/Attacking.png",
+      "poses/undertaker/Upgrade1.png",
+      "poses/undertaker/Upgrade2.png",
+      "poses/undertaker/Upgrade3.png",
+      "poses/undertaker/Default.png"
+    ]
+  },
+  "MOA": {
+    "name": "MOA",
+    "img": "img/Moa.png",
+    "elixir": "img/elixir5.png",
+    "classes": ["img/clan.png", "img/specialist.png"],
+    "range": "Melee",
+    "description": "A tank Mini that attack final squares and make time",
+    "health": { "base": 65, "upgrade": "+20" },
+    "attack": {
+      "base": 3,
+      "description": "Hitting the ground in a <txt class='damageUpgrade'>3x4 area</txt>."
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": "2/7",
+      "description": "Disarm the nearest enemy for <txt class='stunUpgrade'>3</txt> sec.",
+      "target": 1,
+      "duration": "3 sec"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> <txt class='damageUpgrade'>+3</txt> attack damage.",
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='damageUpgrade'>+1 target (the farthest)</txt>.",
+      "<txt class='specialUpgrade'>Super:</txt> <txt class='stunUpgrade'>+3 sec</txt> of disarm."
+    ],
+    "poses": [
+      "poses/moa/Default.png",
+      "poses/moa/Attacking.png",
+      "poses/moa/Upgrade1.png",
+      "poses/moa/Upgrade2.png",
+      "poses/moa/Upgrade3.png",
+      "poses/moa/Default.png"
+    ]
+  },
+  "VIPER DAGGER": {
+    "name": "VIPER DAGGER",
+    "img": "img/ViperDagger.png",
+    "elixir": "img/elixir2.png",
+    "classes": ["img/rogue.png"],
+    "range": "Range: 2",
+    "description": "A deadly Mini who poison enemies accumulating a lot of damage.",
+    "health": { "base": 16, "upgrade": "+6" },
+    "attack": {
+      "base": 2,
+      "description": "Throwing his dagger - Deals 2 damage and applies a poison effect that deals 1 damage every 3 seconds (stacks 6 times)."
+    },
+    "speed": { "base": 0.8, "upgrade": "+0.15" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Poison:</txt> Poison deals damage every 2 sec.",
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='attackSpeedUpgrade'>+100% attack speed</txt>.",
+      "<txt class='specialUpgrade'>Poison:</txt> Poison can stack infinitely."
+    ],
+    "poses": [
+      "poses/viperdagger/Default.png",
+      "poses/viperdagger/Attacking.png",
+      "poses/viperdagger/Upgrade1.png",
+      "poses/viperdagger/Upgrade2.png",
+      "poses/viperdagger/Upgrade3.png",
+      "poses/viperdagger/Default.png"
+    ]
+  },
+  "RUBY": {
+    "name": "RUBY",
+    "img": "img/Ruby.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/rogue.png", "img/royal.png"],
+    "range": "Melee",
+    "description": "A dangerous Mini that can attack and stun quickly",
+    "health": { "base": 35, "upgrade": "+10" },
+    "attack": {
+      "base": 3,
+      "description": "Ruby attacks with her sword."
+    },
+    "speed": { "base": 0.8, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": 5,
+      "description": "Turns her weapon around and fires a stun musket shot.",
+      "stun": "1.5 sec",
+      "damage": 4
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Ultimate:</txt> Deals <txt class='damageUpgrade'>+8 DMG</txt>.",
+      "<txt class='specialUpgrade'>Attack:</txt> Deals <txt class='slowUpgrade'>-40% slow</txt> for 1 sec.",
+      "<txt class='specialUpgrade'>Ultimate:</txt> Each ulti cast decreases the energy cost by 1 (stack per round)."
+    ],
+    "poses": [
+      "poses/ruby/Default.png",
+      "poses/ruby/Attacking.png",
+      "poses/ruby/Upgrade1.png",
+      "poses/ruby/Upgrade2.png",
+      "poses/ruby/Upgrade3.png",
+      "poses/ruby/Default.png"
+    ]
+  },
+  "WHISPY": {
+    "name": "WHISPY",
+    "img": "img/Whispy.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/undead.png", "img/mage.png"],
+    "range": "Melee",
+    "description": "A friendly Mini that is a great support",
+    "health": { "base": 25, "upgrade": "+10" },
+    "attack": {
+      "base": 3,
+      "description": "Whispy hits with his briefcase in a 3x1 area."
+    },
+    "speed": { "base": 0.6, "upgrade": "+0.1" },
+    "passive": "When he dies he leaves his briefcase behind him.",
+    "briefcase": {
+      "description": "Gives a 30% hit speed boost around him.",
+      "hp": 15
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Attack:</txt> <txt class='shieldUpgrade'>+5 shield</txt> every 5 sec to allies close to the briefcase.",
+      "<txt class='specialUpgrade'>Attack:</txt> <txt class='attackSpeedUpgrade'>+ 5% hit speed</txt> per ally near the briefcase.",
+      "<txt class='specialUpgrade'>Attack:</txt> Whispy also leaves the briefcase at the beginning of the round."
+    ],
+    "poses": [
+      "poses/whispy/Default.png",
+      "poses/whispy/Attacking.png",
+      "poses/whispy/Upgrade1.png",
+      "poses/whispy/Upgrade2.png",
+      "poses/whispy/Upgrade3.png",
+      "poses/whispy/Default.png"
+    ]
+  },
+  "ZANE": {
+    "name": "ZANE",
+    "img": "img/Zane.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/mage.png", "img/ranger.png"],
+    "range": "Range: 2",
+    "description": "A skillful Mini that throws earrings, gaining shields for each KO.",
+    "health": { "base": 30, "upgrade": "+10" },
+    "attack": {
+      "base": 2,
+      "description": "Zane throws the balls of his earrings hitting 2 enemies."
+    },
+    "speed": { "base": 0.8, "upgrade": "+0.1" },
+    "upgrades": [
+      "<txt class='specialUpgrade'>KO:</txt> For each ally or enemy KOed, Zane gains <txt class='shieldUpgrade'>15 shield</txt>.",
+      "<txt class='specialUpgrade'>KO:</txt> For each ally or enemy KOed, Zane gains <txt class='attackSpeedUpgrade'>25% hit speed</txt> (stack per round).",
+      "<txt class='specialUpgrade'>Round End:</txt> If Zane pass the round, he receives a <txt class='damageUpgrade'>+1 damage</txt>."
+    ],
+    "poses": [
+      "poses/zane/Default.png",
+      "poses/zane/Attacking.png",
+      "poses/zane/Upgrade1.png",
+      "poses/zane/Upgrade2.png",
+      "poses/zane/Upgrade3.png",
+      "poses/zane/Default.png"
+    ]
+  },
+  "NIX": {
+    "name": "NIX",
+    "img": "img/Nix.png",
+    "elixir": "img/elixir5.png",
+    "classes": ["img/elixir.png"],
+    "range": "Melee",
+    "description": "A supportive Mini that boosts allies and generate elixir",
+    "health": { "base": 45, "upgrade": "+10" },
+    "attack": {
+      "base": 1,
+      "description": "Nix gives a slap."
+    }, 
+    "speed": { "base": 0.8, "upgrade": "+0.1" },
+    "passive": "Gives a <txt class='attackSpeedUpgrade'>15% hit speed</txt> boost to the ally on it right and every 15 sec gains 1 elixir (while alive).",
+    "upgrades": [
+      "<txt class='specialUpgrade'>Passive:</txt> +1 of elixir received.",
+      "<txt class='specialUpgrade'>Passive:</txt> -5 sec elixir generation (10 sec).",
+      "<txt class='specialUpgrade'>Passive:</txt> If far from your partner: <txt class='damageUpgrade'>x2 attack</txt>, and if close: <txt class='healthUpgrade'>heal 10% HP</txt> every 5s"
+    ],
+    "poses": [
+      "poses/nix/Default.png",
+      "poses/nix/Attacking.png",
+      "poses/nix/Upgrade1.png",
+      "poses/nix/Upgrade2.png",
+      "poses/nix/Upgrade3.png",
+      "poses/nix/Default.png"
+    ]
+  },
+  "BATTY": {
+    "name": "BATTY",
+    "img": "img/Batty.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/rogue.png", "img/undead.png"],
+    "range": "Melee",
+    "description": "A Mini that bites and stuns enemies with a sonic scream.",
+    "health": { "base": 35, "upgrade": "+10" },
+    "attack": {
+      "base": 3,
+      "description": "Batty bites the enemy."
+    },
+    "speed": { "base": 1, "upgrade": "+0.15" },
+    "ultimate": {
+      "cost": 7,
+      "description": "Launches a sonic scream that stuns and damages enemies in a 3x3 area, and knocks them back one square.",
+      "stun": "1.5 sec",
+      "damage": 4
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Ultimate:</txt> <txt class='stunUpgrade'>Increases stun duration</txt> by 1.5 sec.",
+      "<txt class='specialUpgrade'>Injured:</txt> When is injured gains fury until he dies or recovers.",
+      "<txt class='specialUpgrade'>Attack:</txt> His attack does <txt class='unespeciedUpgrade'>life steal</txt> (66%)."
+    ],
+    "poses": [
+      "poses/batty/Default.png",
+      "poses/batty/Attacking.png",
+      "poses/batty/Upgrade1.png",
+      "poses/batty/Upgrade2.png",
+      "poses/batty/Upgrade3.png",
+      "poses/batty/Default.png"
+    ]
+  },
+  "YUKI": {
+    "name": "YUKI",
+    "img": "img/Yuki.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/mage.png"],
+    "range": "Range: 3",
+    "description": "A frosty Mini that slow enemies",
+    "health": { "base": 20, "upgrade": "+5" },
+    "attack": {
+      "base": 2,
+      "description": "Yuki throws a snowball."
+    },
+    "speed": { "base": 0.5, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": 4,
+      "description": "Yuki throws a giant snowball at the farthest enemy applying slow.",
+      "damage": 6
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>KO:</txt> <txt class='slowUpgrade'>Slow</txt> to nearby enemies 8 sec",
+      "<txt class='specialUpgrade'>Ultimate:</txt> His ulti <txt class='stunUpgrade'>stuns</txt> for 1 sec.",
+      "<txt class='specialUpgrade'>Attack:</txt> Its basic attack also <txt class='slowUpgrade'>slows</txt> the target."
+    ],
+    "poses": [
+      "poses/yuki/Default.png",
+      "poses/yuki/Attacking.png",
+      "poses/yuki/Upgrade1.png",
+      "poses/yuki/Upgrade2.png",
+      "poses/yuki/Upgrade3.png",
+      "poses/yuki/Default.png"
+    ]
+  },
+  "RAYA": {
+    "name": "RAYA",
+    "img": "img/Raya.png",
+    "elixir": "img/elixir4.png",
+    "classes": ["img/saint.png", "img/clan.png"],
+    "range": "Melee",
+    "description": "A Mini that heal and damage with her ultimate",
+    "health": { "base": 40, "upgrade": "+15" },
+    "attack": {
+      "base": 4,
+      "description": "Raya hits the ground with her hammer dealing damage in 3x1 area."
+    },
+    "speed": { "base": 0.4, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": 6,
+      "description": "Raya raises her shield healing allies and damaging enemies around her.",
+      "heal": 5,
+      "damage": 5
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Ultimate:</txt> <txt class='shieldUpgrade'>+ 10 shield</txt> in ulti area.",
+      "<txt class='specialUpgrade'>Boast:</txt> <txt class='attackSpeedUpgrade'>2X Hit speed</txt> for 6s.",
+      "<txt class='specialUpgrade'>Attack:</txt> If hits 3 enemies at once does <txt class='damageUpgrade'>2X ATK</txt>."
+    ],
+    "poses": [
+      "poses/raya/Default.png",
+      "poses/raya/Attacking.png",
+      "poses/raya/Upgrade1.png",
+      "poses/raya/Upgrade2.png",
+      "poses/raya/Upgrade3.png",
+      "poses/raya/Default.png"
+    ]
+  },
+  "SPARKY": {
+    "name": "SPARKY",
+    "img": "img/Sparky.png",
+    "elixir": "img/elixir3.png",
+    "classes": ["img/clan.png"],
+    "range": "Melee",
+    "description": "A nimble Mini that stun and gain speed when injured.",
+    "health": { "base": 25, "upgrade": "+10" },
+    "attack": { "base": 3 },
+    "speed": { "base": 0.7, "upgrade": "+0.1" },
+    "ultimate": {
+      "cost": 5,
+      "description": "Sparky make a big hit with his cane.",
+      "stun": "1.5 sec"
+    },
+    "upgrades": [
+      "<txt class='specialUpgrade'>Injured:</txt> When Sparky is Injured, increases his <txt class='attackSpeedUpgrade'>attack speed</txt> by 50%.",
+      "<txt class='specialUpgrade'>Ultimate:</txt> <txt class='stunUpgrade'>Increases stun duration</txt> by 1 sec.",
+      "<txt class='specialUpgrade'>Ultimate:</txt> <txt class='unespeciedUpgrade'>Reduces energy cost</txt> by 1."
+    ],
+    "poses": [
+      "poses/sparky/Default.png",
+      "poses/sparky/Attacking.png",
+      "poses/sparky/Upgrade1.png",
+      "poses/sparky/Upgrade2.png",
+      "poses/sparky/Upgrade3.png",
+      "poses/sparky/Default.png"
+    ]
+  }
+}

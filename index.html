@@ -10,223 +10,43 @@
     <header>
         <nav>
             <ul>
-                <li><img src="img/Logo.png"></li>
-                <li>MiniSrRaptor</li>
-                <li><a href="https://beacons.ai/minisrraptor"><img src="img/beacons.png" class="socialnetwork"></a></li>
+                <li><a href="#" onclick="location.reload();"><img src="img/Logo.png" alt="Logo"></a></li>
+                <li><a href="#" onclick="location.reload();">MiniSrRaptor</a></li>
+                <li><a href="https://beacons.ai/minisrraptor"><img src="img/beacons.png" class="socialnetwork" alt="Beacons"></a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section>
             <h1>❣️ My Lovely Characters ❣️</h1>
             <p>Learn about stats, abilities and upgrades of my characters.</p>
         </section>
-        <section id="miniBox">
-            </section>
+        <div class="filters">
+            <div class="filter-icons" id="elixir-filters">
+                <img src="img/elixir2.png" class="filter-icon" data-filter="elixir2" alt="Elixir 2">
+                <img src="img/elixir3.png" class="filter-icon" data-filter="elixir3" alt="Elixir 3">
+                <img src="img/elixir4.png" class="filter-icon" data-filter="elixir4" alt="Elixir 4">
+                <img src="img/elixir5.png" class="filter-icon" data-filter="elixir5" alt="Elixir 5">
+            </div>
+            <div class="filter-icons" id="class-filters">
+                <img src="img/ranger.png" class="filter-icon" data-filter="ranger" alt="Ranger">
+                <img src="img/mage.png" class="filter-icon" data-filter="mage" alt="Mage">
+                <img src="img/rogue.png" class="filter-icon" data-filter="rogue" alt="Rogue">
+                <img src="img/undead.png" class="filter-icon" data-filter="undead" alt="Undead">
+                <img src="img/sea.png" class="filter-icon" data-filter="sea" alt="Sea">
+                <img src="img/clan.png" class="filter-icon" data-filter="clan" alt="Clan">
+                <img src="img/specialist.png" class="filter-icon" data-filter="specialist" alt="Specialist">
+                <img src="img/saint.png" class="filter-icon" data-filter="saint" alt="Saint">
+                <img src="img/goblin.png" class="filter-icon" data-filter="goblin" alt="Goblin">
+                <img src="img/royal.png" class="filter-icon" data-filter="royal" alt="Royal">
+                <img src="img/villager.png" class="filter-icon" data-filter="villager" alt="Villager">
+            </div>
+            <div class="filter-icons" id="reset-filters">
+                <img src="img/reset.png" class="filter-icon" data-filter="reset" alt="Reset Filters">
+            </div>
+        </div>
+        <section id="miniBox"></section>
     </main>
-
-    <script>
-        const characters = [
-            {
-                name: "NIGHTMARE",
-                img: "img/nightmare.png", 
-                elixir: "img/elixir5.png",
-                classes: ["img/undead.png", "img/rogue.png"] 
-            },
-            {
-                name: "SUNKEN",
-                img: "img/sunken.png", 
-                elixir: "img/elixir4.png",
-                classes: ["img/sea.png"] 
-            },
-            { 
-                name: "GENIE",
-                img: "img/genie.png", 
-                elixir: "img/elixir3.png",
-                classes: ["img/mage.png"] 
-            },
-            { 
-                name: "GRIFFIN",
-                img: "img/griffin.png", 
-                elixir: "img/elixir2.png",
-                classes: ["img/ranger.png", "img/rogue.png"] 
-            },
-            { 
-                name: "KRAKEN",
-                img: "img/kraken.png", 
-                elixir: "img/elixir2.png",
-                classes: ["img/sea.png", "img/rogue.png"] 
-            },
-            { 
-                name: "ELIXIR PEDDLER",
-                img: "img/ElixirPeddler.png",
-                elixir: "img/elixir4.png",
-                classes: ["img/elixir.png", "img/mage.png"] 
-            },
-            { 
-                name: "BARD",
-                img: "img/bard.png",
-                elixir: "img/elixir3.png",
-                classes: ["img/ranger.png", "img/clan.png"] 
-            },
-            { 
-                name: "CYCLOPS",
-                img: "img/cyclops.png",
-                elixir: "img/elixir2.png",
-                classes: ["img/rogue.png", "img/specialist.png"] 
-            },
-            { 
-                name: "SAMURAI",
-                img: "img/Samurai.png",
-                elixir: "img/elixir2.png",
-                classes: ["img/rogue.png", "img/clan.png"] 
-            },
-            { 
-                name: "TIME TRAVELER",
-                img: "img/TimeTraveler.png",
-                elixir: "img/elixir4.png",
-                classes: ["img/undead.png", "img/mage.png"] 
-            },
-            { 
-                name: "BUTCHER",
-                img: "img/Butcher.png",
-                elixir: "img/elixir3.png",
-                classes: ["img/specialist.png"] 
-            },
-            { 
-                name: "DREAM WEAVER",
-                img: "img/DreamWeaver.png", 
-                elixir: "img/elixir4.png",
-                classes: ["img/mage.png", "img/saint.png"] 
-            },
-            { 
-                name: "ROCKET MACHINE",
-                img: "img/RocketMachine.png",
-                elixir: "img/elixir5.png",
-                classes: ["img/clan.png", "img/specialist.png"] 
-            },
-            { 
-                name: "SAINT GOBLIN",
-                img: "img/SaintGoblin.png",
-                elixir: "img/elixir3.png",
-                classes: ["img/goblin.png", "img/saint.png"] 
-            },
-            { 
-                name: "FOREST GUARDIAN",
-                img: "img/ForestGuardian.png",
-                elixir: "img/elixir4.png",
-                classes: ["img/saint.png", "img/ranger.png"] 
-            },
-            { 
-                name: "BUFFOON",
-                img: "img/Buffoon.png",
-                elixir: "img/elixir2.png",
-                classes: ["img/saint.png", "img/clan.png"] 
-            },
-            { 
-                name: "UNDERTAKER",
-                img: "img/Undertaker.png",
-                elixir: "img/elixir5.png",
-                classes: ["img/undead.png", "img/rogue.png"] 
-            },
-            { 
-                name: "MOA",
-                img: "img/Moa.png",
-                elixir: "img/elixir5.png",
-                classes: ["img/clan.png", "img/specialist.png"] 
-            },
-            { 
-                name: "VIPER DAGGER",
-                img: "img/ViperDagger.png", 
-                elixir: "img/elixir2.png",
-                classes: ["img/rogue.png"] 
-            },
-            { 
-                name: "RUBY",
-                img: "img/Ruby.png", 
-                elixir: "img/elixir4.png",
-                classes: ["img/rogue.png", "img/royal.png"] 
-            },
-            { 
-                name: "WHISPY",
-                img: "img/Whispy.png", 
-                elixir: "img/elixir3.png",
-                classes: ["img/undead.png", "img/mage.png"] 
-            },
-            { 
-                name: "ZANE",
-                img: "img/Zane.png", 
-                elixir: "img/elixir3.png",
-                classes: ["img/mage.png", "img/ranger.png"] 
-            },
-            { 
-                name: "NIX",
-                img: "img/Nix.png",
-                elixir: "img/elixir5.png",
-                classes: ["img/elixir.png"] 
-            },
-            { 
-                name: "BATTY",
-                img: "img/Batty.png",
-                elixir: "img/elixir4.png",
-                classes: ["img/rogue.png", "img/undead.png"] 
-            },
-            { 
-                name: "YUKI",
-                img: "img/Yuki.png", 
-                elixir: "img/elixir3.png",
-                classes: ["img/mage.png"] 
-            },
-            { 
-                name: "RAYA",
-                img: "img/Raya.png", 
-                elixir: "img/elixir4.png",
-                classes: ["img/saint.png", "img/clan.png"] 
-            },
-            { 
-                name: "SPARKY",
-                img: "img/Sparky.png", 
-                elixir: "img/elixir3.png",
-                classes: ["img/clan.png"] 
-            }
-        ];
-
-        const miniBox = document.getElementById('miniBox');
-
-        characters.forEach(character => {
-            const characterLink = document.createElement('a');
-            characterLink.href = `character.html?name=${encodeURIComponent(character.name)}`; 
-            characterLink.classList.add('character');
-
-            const img = document.createElement('img');
-            img.src = character.img;
-            img.classList.add('mini');
-            characterLink.appendChild(img);
-
-            const elixirDiv = document.createElement('div');
-            elixirDiv.classList.add('elixir');
-            const elixirImg = document.createElement('img');
-            elixirImg.src = character.elixir;
-            elixirDiv.appendChild(elixirImg);
-            characterLink.appendChild(elixirDiv);
-
-            const classesDiv = document.createElement('div');
-            classesDiv.classList.add('class');
-            character.classes.forEach(classImgSrc => {
-                const classImg = document.createElement('img');
-                classImg.src = classImgSrc;
-                classesDiv.appendChild(classImg);
-            });
-            characterLink.appendChild(classesDiv);
-
-            const nameDiv = document.createElement('div');
-            nameDiv.classList.add('miniName');
-            nameDiv.textContent = character.name;
-            characterLink.appendChild(nameDiv);
-
-            miniBox.appendChild(characterLink);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

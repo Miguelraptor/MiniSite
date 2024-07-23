@@ -1,8 +1,6 @@
 @font-face {
-    font-family: 'StarCartoon';
-    src: url('https://raw.githubusercontent.com/Miguelraptor/MiniSite/main/font/StarCartoon.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: StarCartoon;
+    src: url('fonts/StarCartoon.ttf'), url('fonts/StarCartoon.ttf') format('truetype');
 }
 
 body {
@@ -11,10 +9,37 @@ body {
     margin: 0;
     padding: 0;
 }
-  
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: var(--dynamic-pattern);
+    background-size: 5rem;
+    background-repeat: repeat;
+    transform: rotate(45deg);
+    filter: grayscale(100%);
+    transform-origin: center center;
+    opacity: 0.25;
+    z-index: -1;
+    transition: background-image 0.5s ease-in-out;
+    animation: movePattern 30s linear infinite;
+}
+
+@keyframes movePattern {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0px 200px;
+    }
+}
 
 /*Nav*/
-header{
+header {
     color: white;
     padding: 8px;
     position: fixed;
@@ -23,235 +48,452 @@ header{
     background: linear-gradient(to bottom, #1a2f72 75%, transparent);
     z-index: 1;
 }
-nav ul{
+
+nav ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
-    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
 }
-ul img{
-    width: 90px;
+
+ul img {
+    width: 5rem;
 }
-.socialnetwork{
+
+.socialnetwork {
     position: absolute;
     right: 0;
-    margin-top: 0px;
-    margin-right: 28px;
-    width: 70px;
-    margin-left: 8px;
+    top: 35%;
+    transform: translateY(-50%);
+    margin-right: 1.75rem;
+    width: 4rem;
+    margin-left: 0.5rem;
 }
-nav li{
-    display:inline;
-    vertical-align: middle;
+
+nav li {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
 
 /*Site*/
-section{
-    color:white;
+section {
+    color: white;
     display: flex;
 }
 
-/*Character img*/
-section img{
-    margin: 120px 30px;
-    width:  365px;
-    height:  365px;
-    border-radius: 13px;
+section img {
+    margin: 12vh 4vh;
+    height: 30vh;
+    border-radius: 2vh;
 }
 
 /*Title*/
-#mainInfo{
+#characterName {
     display: flex;
-    flex-direction: column;
-}
-#mainInfo h1{
-    margin-top: 120px;
-    margin-bottom: 50px;
-    font-size: 40px;
-    display: flex;
-    align-items:baseline;
+    align-items: center;
 }
 
-/*Elixir, clases y rango*/
-#faststats{
+#mainInfo h1 {
+    margin-top: 6vh;
+    margin-left: -2vh;
+    font-size: 5vh;
     display: flex;
-    margin-top: -160px;
-    align-items: center;
-    margin-bottom: 10px;
+    align-items: baseline;
 }
-#range{
+
+/*FastStats = Elixir, classes, and range*/
+#faststats {
+    margin-top: 0.75vh;
+    margin-left: 2vh;
+    display: flex;
+    align-items: center;
+}
+
+#range {
     display: inline-block;
-    margin: 115px 30px;
-    padding: 7px 15px;
-    margin-bottom: 115px;
+    margin: 10vh 4vh;
+    padding: 1vh 2.5vh;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 100px;
+    border-radius: 10vh;
 }
-#faststats img:first-child{
-    margin-left: 0px;
+
+#faststats img:first-child {
+    margin-left: 0;
 }
-#faststats img{
-    width: 6.5%;
-    height: 14%;
-    margin-right: -20px;
+
+#faststats img {
+    width: 3vh;
+    height: 3vh;
+    margin-right: -3vh;
+}
+
+#faststats img:first-child {
+    width: 4vh;
+    height: 4vh;
 }
 
 /*Info*/
-#description{
-    margin-top: -100px;
+#description {
+    margin-top: -9vh;
     color: #b3c7e7;
-    font-size: 18px;
+    font-size: 1.8vh;
 }
 
 /*Stats*/
 #statsinfo {
-    margin-top: -100px;
-    display: inline-flex;
-    size: 10px;
+    margin-top: -10vh;
+    margin-left: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #statsinfo div {
-    margin-left: -50px;
+    margin-left: -7vh;
     position: relative;
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #statsinfo img.stats {
-    width: 150px;
-    height: 75px;
+    width: 14vh;
+    height: 7vh;
 }
 
 #statsinfo span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(200%, -50%);
-    margin-left: -60px;
-    font-size: 24px;
+    transform: translate(-50%, -50%);
+    font-size: 2.4vh;
 }
-#attacktext{
-    margin-left: -5px !important;
-}
-#ultitext{
-    margin-left: -70px !important;
-}
-#speedtext{
-    margin-left: -90px !important;
-}
-#upgradeablespeed{
-    margin-left: -90px !important;
-}
-.upgradeable{
+
+.upgradeable {
     color: #bb99f8;
-    font-size: 14px !important;
-    margin-top: 2px;
-    padding-left: 14px;
+    font-size: 1.5vh !important;
+    padding-left: 5.5vh;
 }
+
+#atkspeedupgradeable {
+    margin-left: 1vh !important;
+}
+
 /*Attack*/
 #attackinfo {
     display: flex;
     align-items: center;
-    height: 100px;
-    width: 400px;
+    height: 10vh;
+    width: 40vh;
     position: relative;
-    margin-top: -115px;
-    margin-left: -50px;
+    margin-top: -11.5vh;
+    margin-left: -5vh;
 }
 
 #attackinfo img {
-    height: 100px;
-    width: 400px;
+    height: 10vh;
+    width: 40vh;
 }
 
 #attackinfo span {
     position: absolute;
     top: 50%;
     left: 40%;
-    transform: translate(-20%, -50%);
+    transform: translate(-2%, -50%);
 }
 
-/*Super or Generic*/
-#super-genericinfo {
+#attacktext {
+    padding-left: 4vh;
+}
+
+#ultitext {
+    padding-left: 5vh;
+}
+
+/*Special Ability*/
+.specialAbility {
     display: flex;
     align-items: center;
-    height: 100px;
-    width: 400px;
+    height: 7vh;
+    width: 50vh;
     position: relative;
-    margin-top: -102px;
-    margin-left: -40px;
+    margin-top: -10vh;
+    margin-left: -5vh;
 }
 
-#super-genericinfo img {
-    height: 90px;
-    width: 400px;
+.specialAbility img {
+    height: 10vh;
+    width: 50vh;
 }
 
-#ultitext{
+.special {
+    color: rgb(28, 191, 255);
+    font-weight: bold;
+    position: absolute;
+    top: -0.2vh;
+    left: 6vh;
+    font-size: 2vh;
+}
+
+#UltiText {
     position: absolute;
     top: 50%;
-    left: 58%;
-    transform: translate(-20%, -50%);
+    left: 14vh;
+    transform: translateY(-50%);
+    width: 31vh;
+    font-size: 1.7vh;
 }
 
-#generictext{
+.specialAbilityText {
     position: absolute;
     top: 50%;
-    left: 37%;
-    transform: translate(-10%, -50%);
+    transform: translateY(-25%);
+    left: 7vh;
+    width: 37vh;
+    font-size: 1.7vh;
 }
-
-
 
 /* Upgrades Section - Overlapping Images */
 #upgrades {
-    position: relative; /* Make this a positioning context */
-    top: -220px;
-    width: 400px;
-    height: 270px;
+    position: relative;
+    top: -22vh;
+    width: 40vh;
+    height: 27vh;
 }
 
 #upgrades-img {
     width: 100%;
     height: 100%;
-    display: block; /* Ensure the image takes up full space */
+    display: block;
 }
 
 #upgradeinfo {
-    position: absolute; /* Position relative to #upgrades */
-    top: 0; 
-    left: 130px; 
-    width: 60%; 
+    position: absolute;
+    top: 0;
+    left: 13vh;
+    width: 57vh;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 100px; /* Add some padding to the text */
-    justify-content: flex-start; /* Align items to the start */
-    text-align: left; /* Align text to the left */
+    padding-top: 11vh;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 1.7vh;
 }
 
 #upgradeinfo div {
-    margin-top: 40px; /* Separate each text input by 70px */
-    width: 100%; /* Reserve space for each row */
-    text-align: left; /* Align text within each row */
-    height: 100px; /* Increased fixed height for each column */
+    margin-top: 2vh;
+    width: 40%;
+    text-align: left;
+    height: 10vh;
     display: flex;
-    align-items: center; /* Center text vertically */
-    white-space: normal; /* Allow text to wrap */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    align-items: center;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*UpgradeColors*/
-.damage{
-    color:rgb(255, 30, 30)
+.specialUpgrade {
+    color: rgb(28, 191, 255);
+    font-weight: bold;
 }
-.health{
-    color:rgb(60, 255, 60)
+
+.damageUpgrade {
+    color: rgb(255, 30, 30);
 }
-.stun{
-    color:rgb(255, 242, 64)
+
+.healthUpgrade {
+    color: rgb(60, 255, 60);
+}
+
+.stunUpgrade {
+    color: rgb(255, 195, 64);
+}
+
+.attackSpeedUpgrade {
+    color: rgb(238, 56, 255);
+}
+
+.shieldUpgrade {
+    color: #808080;
+}
+
+.unespeciedUpgrade {
+    color: rgb(255, 255, 0);
+}
+
+/* Mobile view adjustments */
+@media (max-aspect-ratio: 1/1) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #characterimg {
+        margin-top: 13vh;
+    }
+
+    section img {
+        margin: 2vh 1vh;
+        width: 30vh;
+        height: 30vh;
+    }
+
+    #mainInfo h1 {
+        margin: 2vh auto;
+        font-size: 3vh;
+        transform: translateX(20%);
+    }
+
+    #faststats {
+        margin: -0.5vh auto;
+        transform: translateX(10%);
+    }
+
+    #range {
+        margin: 2vh 1vh;
+        padding: 1vh 2vh;
+        border-radius: 5vh;
+    }
+
+    #faststats img {
+        width: 2vh;
+        height: 2vh;
+        margin-right: 0;
+    }
+
+    #faststats img:first-child {
+        width: 3vh;
+        height: 3vh;
+    }
+
+    #description {
+        margin-top: 1vh;
+        font-size: 1.5vh;
+        text-align: center;
+    }
+
+    #statsinfo {
+        margin-top: 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    #statsinfo div {
+        display: none;
+    }
+
+    #statsinfo div:nth-child(-n+4) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -2vh;
+    }
+
+    #statsinfo img.stats {
+        width: 9vh;
+        height: 4.5vh;
+        margin-left: 0vh;
+    }
+
+    #statsinfo span {
+        margin-left: 0;
+        font-size: 2vh;
+    }
+
+    .upgradeable {
+        font-size: 1.3vh !important;
+        padding-left: 4.5vh;
+    }
+
+    #attackinfo {
+        height: 8vh;
+        width: 30vh;
+        margin-top: 1vh;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #attackinfo img {
+        height: 8vh;
+        width: 30vh;
+    }
+
+    #attacktext {
+        padding-left: 2vh;
+    }
+
+    #ultitext {
+        padding-left: 2.5vh;
+    }
+
+    .specialAbility {
+        height: 6vh;
+        width: 40vh;
+        margin-top: 1vh;
+        margin-left: 0;
+    }
+
+    .specialAbility img {
+        height: 10vh;
+        width: 40vh;
+    }
+
+    .special {
+        top: -0.1vh;
+        left: 4vh;
+        font-size: 1.7vh;
+    }
+
+    #UltiText {
+        top: 50%;
+        left: 10vh;
+        width: 28vh;
+        font-size: 1.7vh;
+    }
+
+    .specialAbilityText {
+        top: 50%;
+        left: 5vh;
+        width: 30vh;
+        font-size: 1.7vh;
+    }
+
+    #upgrades {
+        top: 0vh;
+        margin: 1vh auto;
+        width: 30vh;
+        height: 25vh;
+    }
+
+    #upgradeinfo {
+        left: 50%;
+        transform: translateX(-10%);
+        width: 60vh;
+        padding-top: 8vh;
+        font-size: 1.7vh;
+        margin-top: -7vh;
+        text-align: center;
+    }
+
+    #upgradeinfo div {
+        margin-top: 2vh;
+        width: 35%;
+        height: 8vh;
+    }
 }
