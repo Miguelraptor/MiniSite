@@ -1,56 +1,53 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const miniBox = document.getElementById('miniBox');
     const filterIcons = document.querySelectorAll('.filter-icon');
-    let selectedElixir = new Set();
+    const selectedElixir = new Set();
     let selectedClass = null;
+
+    const createCharacterElement = (character) => {
+        const characterLink = document.createElement('a');
+        characterLink.href = `character.html?name=${encodeURIComponent(character.name)}`;
+        characterLink.classList.add('character');
+        characterLink.setAttribute('data-pattern', `url('img/patterns/${character.name}_pattern.png')`);
+
+        characterLink.innerHTML = `
+            <img src="${character.img}" class="mini" alt="${character.name} Image">
+            <div class="elixir">
+                <img src="${character.elixir}" alt="${character.elixir} Elixir">
+            </div>
+            <div class="class">
+                ${character.classes.map(classImgSrc => `
+                    <img src="${classImgSrc}" alt="${classImgSrc.split('/').pop().split('.')[0]} Class">
+                `).join('')}
+            </div>
+            <div class="miniName">${character.name}</div>`;
+
+        return characterLink;
+    };
+
+    const applyFilters = () => {
+        const characters = document.querySelectorAll('.character');
+        characters.forEach(character => {
+            const elixirMatch = selectedElixir.size === 0 || selectedElixir.has(character.querySelector('.elixir img').src.split('/').pop().split('.')[0]);
+            const classMatch = !selectedClass || Array.from(character.querySelectorAll('.class img')).some(img => img.src.includes(selectedClass));
+            character.style.display = elixirMatch && classMatch ? '' : 'none';
+        });
+    };
 
     fetch('characters.json')
         .then(response => response.json())
         .then(data => {
             const characterArray = Object.values(data);
             characterArray.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+            
             const newestCharacter = characterArray[0];
             const patternImage = `url('img/patterns/${newestCharacter.name}_pattern.png')`;
             document.body.style.setProperty('--dynamic-pattern', patternImage);
             document.body.classList.add('dynamic-pattern');
 
             characterArray.forEach(character => {
-                const characterLink = document.createElement('a');
-                characterLink.href = `character.html?name=${encodeURIComponent(character.name)}`;
-                characterLink.classList.add('character');
-                characterLink.setAttribute('data-pattern', `url('img/patterns/${character.name}_pattern.png')`);
-
-                const img = document.createElement('img');
-                img.src = character.img;
-                img.classList.add('mini');
-                img.alt = `${character.name} Image`;
-                characterLink.appendChild(img);
-
-                const elixirDiv = document.createElement('div');
-                elixirDiv.classList.add('elixir');
-                const elixirImg = document.createElement('img');
-                elixirImg.src = character.elixir;
-                elixirImg.alt = `${character.elixir} Elixir`;
-                elixirDiv.appendChild(elixirImg);
-                characterLink.appendChild(elixirDiv);
-
-                const classesDiv = document.createElement('div');
-                classesDiv.classList.add('class');
-                character.classes.forEach(classImgSrc => {
-                    const classImg = document.createElement('img');
-                    classImg.src = classImgSrc;
-                    classImg.alt = `${classImgSrc.split('/').pop().split('.')[0]} Class`;
-                    classesDiv.appendChild(classImg);
-                });
-                characterLink.appendChild(classesDiv);
-
-                const nameDiv = document.createElement('div');
-                nameDiv.classList.add('miniName');
-                nameDiv.textContent = character.name;
-                characterLink.appendChild(nameDiv);
-
-                miniBox.appendChild(characterLink);
+                const characterElement = createCharacterElement(character);
+                miniBox.appendChild(characterElement);
             });
 
             miniBox.addEventListener('mouseover', (event) => {
@@ -61,11 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            miniBox.addEventListener('mouseout', (event) => {
-                const characterElement = event.target.closest('.character');
-                if (characterElement) {
-                    document.body.style.setProperty('--dynamic-pattern', patternImage);
-                }
+            miniBox.addEventListener('mouseout', () => {
+                document.body.style.setProperty('--dynamic-pattern', patternImage);
             });
         })
         .catch(error => {
@@ -79,11 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const filterValue = icon.dataset.filter;
 
             if (filterType === 'elixir-filters') {
-                if (selectedElixir.has(filterValue)) {
-                    selectedElixir.delete(filterValue);
-                } else {
-                    selectedElixir.add(filterValue);
-                }
+                selectedElixir.has(filterValue) ? selectedElixir.delete(filterValue) : selectedElixir.add(filterValue);
             } else if (filterType === 'class-filters') {
                 selectedClass = selectedClass === filterValue ? null : filterValue;
             } else {
@@ -102,13 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
             applyFilters();
         });
     });
-
-    function applyFilters() {
-        const characters = document.querySelectorAll('.character');
-        characters.forEach(character => {
-            const elixirMatch = selectedElixir.size === 0 || selectedElixir.has(character.querySelector('.elixir img').src.split('/').pop().split('.')[0]);
-            const classMatch = selectedClass === null || Array.from(character.querySelectorAll('.class img')).some(img => img.src.split('/').pop().split('.')[0] === selectedClass);
-            character.style.display = elixirMatch && classMatch ? '' : 'none';
-        });
-    }
 });

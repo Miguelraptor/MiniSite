@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Details</title>
     <link rel="stylesheet" href="characterstyle.css">
-    <title>Character Info</title>
 </head>
 <body>
     <header>
@@ -16,23 +16,27 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="character-section"></section>
+
         <section id="upgrades">
-            <img src="img/upgrades.png" id="upgrades-img">
+            <img src="img/upgrades.png" alt="Upgrades" id="upgrades-img">
             <div id="upgradeinfo"></div>
         </section>
-        <div class="slideshow">
+
+        <section class="slideshow">
             <div class="slides">
-                <div class="image" id="slide1"></div>
-                <div class="image" id="slide2"></div>
-                <div class="image" id="slide3"></div>
-                <div class="image" id="slide4"></div>
-                <div class="image" id="slide5"></div>
-                <div class="image" id="slide6"></div>
+                <div id="slide1" class="image"></div>
+                <div id="slide2" class="image"></div>
+                <div id="slide3" class="image"></div>
+                <div id="slide4" class="image"></div>
+                <div id="slide5" class="image"></div>
+                <div id="slide6" class="image"></div>
             </div>
-        </div>
+        </section>
     </main>
+
     <script src="character.js"></script>
 </body>
 </html>

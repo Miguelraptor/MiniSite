@@ -3,50 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniSrRaptor</title>
+    <title>MiniSrRaptor's Characters</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#" onclick="location.reload();"><img src="img/Logo.png" alt="Logo"></a></li>
+                <li><a href="#" onclick="location.reload();"><img src="img/Logo.png" alt="Logo" class="nav-logo"></a></li>
                 <li><a href="#" onclick="location.reload();">MiniSrRaptor</a></li>
-                <li><a href="https://beacons.ai/minisrraptor"><img src="img/beacons.png" class="socialnetwork" alt="Beacons"></a></li>
+                <li><a href="https://beacons.ai/minisrraptor"><img src="img/beacons.png" alt="Beacons" class="socialnetwork"></a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
+        <section class="intro-section">
             <h1>❣️ My Lovely Characters ❣️</h1>
             <p>Learn about stats, abilities and upgrades of my characters.</p>
         </section>
-        <div class="filters">
-            <div class="filter-icons" id="elixir-filters">
-                <img src="img/elixir2.png" class="filter-icon" data-filter="elixir2" alt="Elixir 2">
-                <img src="img/elixir3.png" class="filter-icon" data-filter="elixir3" alt="Elixir 3">
-                <img src="img/elixir4.png" class="filter-icon" data-filter="elixir4" alt="Elixir 4">
-                <img src="img/elixir5.png" class="filter-icon" data-filter="elixir5" alt="Elixir 5">
+
+        <section class="filters">
+            <div id="elixir-filters" class="filter-icons">
+                <img src="img/elixir2.png" alt="Elixir 2" class="filter-icon" data-filter="elixir2">
+                <img src="img/elixir3.png" alt="Elixir 3" class="filter-icon" data-filter="elixir3">
+                <img src="img/elixir4.png" alt="Elixir 4" class="filter-icon" data-filter="elixir4">
+                <img src="img/elixir5.png" alt="Elixir 5" class="filter-icon" data-filter="elixir5">
             </div>
-            <div class="filter-icons" id="class-filters">
-                <img src="img/ranger.png" class="filter-icon" data-filter="ranger" alt="Ranger">
-                <img src="img/mage.png" class="filter-icon" data-filter="mage" alt="Mage">
-                <img src="img/rogue.png" class="filter-icon" data-filter="rogue" alt="Rogue">
-                <img src="img/undead.png" class="filter-icon" data-filter="undead" alt="Undead">
-                <img src="img/sea.png" class="filter-icon" data-filter="sea" alt="Sea">
-                <img src="img/clan.png" class="filter-icon" data-filter="clan" alt="Clan">
-                <img src="img/specialist.png" class="filter-icon" data-filter="specialist" alt="Specialist">
-                <img src="img/saint.png" class="filter-icon" data-filter="saint" alt="Saint">
-                <img src="img/goblin.png" class="filter-icon" data-filter="goblin" alt="Goblin">
-                <img src="img/royal.png" class="filter-icon" data-filter="royal" alt="Royal">
-                <img src="img/villager.png" class="filter-icon" data-filter="villager" alt="Villager">
+
+            <div id="class-filters" class="filter-icons">
+                <img src="img/ranger.png" alt="Ranger" class="filter-icon" data-filter="ranger">
+                <img src="img/mage.png" alt="Mage" class="filter-icon" data-filter="mage">
+                <img src="img/rogue.png" alt="Rogue" class="filter-icon" data-filter="rogue">
+                <img src="img/undead.png" alt="Undead" class="filter-icon" data-filter="undead">
+                <img src="img/sea.png" alt="Sea" class="filter-icon" data-filter="sea">
+                <img src="img/clan.png" alt="Clan" class="filter-icon" data-filter="clan">
+                <img src="img/specialist.png" alt="Specialist" class="filter-icon" data-filter="specialist">
+                <img src="img/saint.png" alt="Saint" class="filter-icon" data-filter="saint">
+                <img src="img/goblin.png" alt="Goblin" class="filter-icon" data-filter="goblin">
+                <img src="img/royal.png" alt="Royal" class="filter-icon" data-filter="royal">
+                <img src="img/villager.png" alt="Villager" class="filter-icon" data-filter="villager">
             </div>
-            <div class="filter-icons" id="reset-filters">
-                <img src="img/reset.png" class="filter-icon" data-filter="reset" alt="Reset Filters">
+
+            <div id="reset-filters" class="filter-icons">
+                <img src="img/reset.png" alt="Reset Filters" class="filter-icon" data-filter="reset">
             </div>
-        </div>
-        <section id="miniBox"></section>
+        </section>
+
+        <section id="miniBox" class="character-grid"></section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
